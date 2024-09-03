@@ -15,12 +15,7 @@
   },
   "targetDefaults": {
     "@nx/node:build": {
-      "dependsOn": [
-        {
-          "projects": "dependencies",
-          "target": "build"
-        }
-      ]
+      "dependsOn": [{ "projects": "dependencies", "target": "build" }]
     },
     "@nx/esbuild:esbuild": {
       "cache": true,
@@ -34,12 +29,7 @@
     }
   },
   "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/vite/plugin",
       "options": {
@@ -59,13 +49,9 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": {
-        "style": "@emotion/styled"
-      },
-      "library": {
-        "style": "@emotion/styled",
-        "linter": "eslint"
-      }
+      "component": { "style": "@emotion/styled" },
+      "library": { "style": "@emotion/styled", "linter": "eslint" }
     }
-  }
+  },
+  "nxCloudAccessToken": "ZjNhN2NkYjctMjA4OS00YTIzLWJhY2UtODdkN2VlYzQ2NDlkfHJlYWQtd3JpdGU="
 }
